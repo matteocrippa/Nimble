@@ -20,10 +20,11 @@
 
 #if (os(macOS) || os(iOS)) && (arch(x86_64) || arch(arm64))
 
+import CwlCatchException
 import Foundation
 import Swift
 
-#if SWIFT_PACKAGE
+#if SWIFT_PACKAGE || COCOAPODS
 	import CwlMachBadInstructionHandler
 #endif
 
